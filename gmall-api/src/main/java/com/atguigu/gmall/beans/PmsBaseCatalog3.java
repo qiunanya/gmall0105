@@ -24,6 +24,6 @@ public class PmsBaseCatalog3 implements Serializable {
     @TableId
     private Long id;
     private String name;
-    private Long catalog1Id;
+    private Long catalog2Id;
 
 }
