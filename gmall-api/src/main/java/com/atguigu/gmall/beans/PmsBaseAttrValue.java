@@ -23,7 +23,5 @@ public class PmsBaseAttrValue implements Serializable {
     private String valueName;
     private Long attrId;
     private String isEnabled;
-    private String urlParam;
-
 
 }

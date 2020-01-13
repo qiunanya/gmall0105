@@ -1,5 +1,6 @@
 package com.atguigu.gmall.beans;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
@@ -7,6 +8,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.List;
+
 /**
  * 属性表
  *@author：Mr.qiu
@@ -20,9 +23,11 @@ import java.io.Serializable;
 public class PmsBaseAttrInfo implements Serializable {
 
     @TableId
-    private String id;
+    private Long id;
     private String attrName;
     private String catalog3Id;
     private String isEnabled;
+    @TableField(exist = false)
+    private List<PmsBaseAttrValue> attrValueList;
 
 }
